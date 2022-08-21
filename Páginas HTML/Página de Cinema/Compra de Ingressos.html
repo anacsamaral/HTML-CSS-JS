@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingressos</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+            width: 100%;
+            background-color: white;
+            border: 1px solid white;
+            text-align: center;
+        }
+        li a.active{
+            background-color: rgb(95, 141, 141);
+            color: white;
+        }
+        li, a {
+            display: inline-block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active){
+            background-color: #00688B;
+            color: white;
+        }
+        li {
+            text-align:left;
+            border-bottom: 0px solid white;
+        }
+        li:last-child{
+            border-bottom:none;
+        }
+        select{
+            width: 100%;
+            padding: 16px 20px;
+            border: solid;
+            border-radius: 4px;
+            background-color: #F1F1F1;
+            font-size: 15px;
+            font-family: cursive;
+        }
+        h1{
+            color: white;
+            font-family: cursive;
+            text-align: center;
+            font-size: 65px;
+            margin-bottom: 1px;
+            margin-top: 1px;
+        }
+        h4{
+            color: white;
+            font-size: 20px;
+            font-family: cursive;
+        }
+        body{
+            background-color: #00688B;
+            border: solid;
+            border-color: white;
+        }
+        form {
+           font-family: cursive;
+           color: white;
+        }
+        fieldset {
+            margin: 10px;
+            margin-right: 300px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="Página de Cinema.html">PÁGINA INICIAL</a></li>
+        <li><a class="active" href="Compra de Ingressos.html">COMPRA DE INGRESSOS</a></li>
+        <li><a href="Cadastramento.html">CADASTRO</a></li>
+        <li><a href="Contato[.html">FALE CONOSCO</a></li>
+        <li><a href="Local.html">LOCAL</a></li>
+    </ul>
+    <h1>Formulário de Compra</h1>
+
+    <h4>Selecione o Filme que Deseja Assistir:</h4>
+
+    <form>
+        <select name="coutry" id="coutry">
+            <option value="au">Homem-Aranha: Sem Volta Para Casa</option>
+            <option value="ca">Doutor Estranho no Multiverso da Loucura</option>
+            <option value="usa">Sonic 2</option>
+        </select>
+    </form>
+
+    <h4>Agora preencha o formulário a seguir para concluir a sua compra:</h4>
+
+    <form action="/action_page.php" autocomplete="off"> <!--atributo autocomplete/novalidate-->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+        <label for="nome1">Nome Completo:</label> 
+        <input type="text" id="nome1" name="nome" value=""> <!--atributo value e disabled-->
+
+        <label for="dt_nascimento">Data de Nascimento:</label>
+        <input type="date" id="dt_nascimento" name="nascimento" value="">      
+<br>
+<br>
+        <label for="cpf">Número do Cartão de Crédito/Débito:</label>
+        <input type="number" id="card" name="card" value="" readonly><!--atributo readonly-->
+   
+        <label for="rg">Senha:</label>
+        <input type="password" id="password" name="password" value="" required><!--atributo required-->
+<br>
+<br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contato</legend>
+    <label for="telefone">Whatsapp:</label>
+    <input type="number" id="telefone" name="telefone" value="" autofocus placeholder="(00)00000-0000"><!--atributo autofocus-->
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" value="" placeholder="exemplo@gmail.com">
+<br>
+<br>
+        </fieldset>
+    <form>
+        <fieldset>
+            <legend>Qual(is) horários(s) você tem interesse?</legend>
+                <input type="checkbox" id="adm" name="adm" value="adm">
+                <label for="adm">14h00</label><br>
+    
+                <input type="checkbox" id="inf" name="inf" value="inf">
+                <label for="inf">17h45</label><br>
+    
+                <input type="checkbox" id="mkt" name="mkt" value="mkt">
+                <label for="mkt">20h00</label><br>
+    
+                <input type="checkbox" id="ads" name="ads" value="ads">
+                <label for="ads">22h30</label><br><br>
+        </fieldset>   
+    </form>
+    <center>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <input type="button" value="Imprimir" onclick="print()">
+        </form>
+    </center>
+</body>
+</html>

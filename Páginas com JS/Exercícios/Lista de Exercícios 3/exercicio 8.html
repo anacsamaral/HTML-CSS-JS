@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var mulher=0;
+        var homem=0;
+        for(var i=1;i<=5;i++){
+            var sexo=prompt("Digite seu sexo:","");
+            if(sexo=="Feminino" || sexo=="feminino"){
+                mulher=mulher+1;                
+            }
+            if(sexo=="Masculino"|| sexo=="masculino"){
+                homem=homem+1;
+            }
+        }
+        document.write("A quantidade de mulheres é " +mulher+ " e a quantidade de homens é " +homem)
+
+        var maior=0;
+        for(var i=1; i<= 5;i++){
+            var altura=Number(prompt("Digite a altura",""));
+            if(altura > maior){
+                maior=altura;
+            }
+        }
+        if(altura == maior && sexo == "feminino"){
+            document.write("<br>","A maior altura é: " + maior+ " e pertence ao sexo femino");
+        }
+        else
+        document.write("<br>","A maior altura é: " + maior+ " e pertence ao sexo masculino");  
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

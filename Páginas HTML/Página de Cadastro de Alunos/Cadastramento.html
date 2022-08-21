@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Cadastro</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+            width: 20%;
+            background-color: #f1f1f1;
+            border: 1px solid #555;
+        }
+        li a.active{
+            background-color: #5a2026 ;
+            color: white;
+        }
+        li, a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active){
+            background-color: #555;
+            color: white;
+        }
+        li {
+            text-align:left;
+            border-bottom: 0px solid #555;  
+        }
+        li:last-child{
+            border-bottom:none;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: -29px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        h3  {
+            margin-left: 120px ;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-image: url("arrudamello.png");
+            background-repeat: no-repeat;
+            background-position: 1340px 23px;
+            margin-right: 100px;
+            text-align: justify;    
+            background-color: rgb(209, 160, 166);
+        }
+        form {
+           margin-left: 350px;
+           margin-top: -300px;
+        }
+        fieldset {
+            margin: 10px;
+            margin-right: 300px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Área de Cadastro</h1>
+    <h3>Menu</h3>
+    <ul>
+        <li><a href="#news">Home</a></li>
+        <li><a class="active" href="#home">Cadastro</a></li>
+        <li><a href="#news">Notícias</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a href="#about">Sobre</a></li>
+    </ul>
+
+<br><br>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+        <label for="nome1">Nome Completo:</label>
+        <input type="text" id="nome1" name="nome" value="">
+
+        <label for="dt_nascimento">Data de Nascimento:</label>
+        <input type="date" id="dt_nascimento" name="nascimento" value="">
+<br>
+<br>
+        <label for="cpf">CPF:</label>
+        <input type="number" id="cpf" name="cpf" value="">
+   
+        <label for="rg">RG:</label>
+        <input type="number" id="cpf" name="cpf" value="">
+<br>
+<br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contato</legend>
+    <label for="telefone">Whatsapp:</label>
+    <input type="number" id="telefone" name="telefone" value="">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" value="">
+<br>
+<br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Residencial</legend>
+    <label for="address">Endereço:</label>
+    <input type="text" id="address" name="address" value="">
+
+    <label for="nmr">Nº:</label>
+    <input type="number" id="nmr" name="nmr" value="">
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" name="bairro" value="">
+<br>
+<br>
+        </fieldset>
+    <form>
+        <fieldset>
+            <legend>Qual(is) curso(s) você tem interesse?</legend>
+                <input type="checkbox" id="adm" name="adm" value="adm">
+                <label for="adm">Administração</label><br>
+    
+                <input type="checkbox" id="inf" name="inf" value="inf">
+                <label for="inf">Informática</label><br>
+    
+                <input type="checkbox" id="mkt" name="mkt" value="mkt">
+                <label for="mkt">Marketing</label><br>
+    
+                <input type="checkbox" id="ads" name="ads" value="ads">
+                <label for="ads">Análise e Desenvolvimento de Sistemas</label><br><br>
+        </fieldset>   
+    </form>
+    <center>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <input type="button" value="Imprimir" onclick="print()">
+        </form>
+    </center>
+</body>
+</html>

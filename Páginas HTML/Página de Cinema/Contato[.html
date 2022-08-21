@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mais informações</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+            width: 100%;
+            background-color: white;
+            border: 1px solid white;
+            text-align: center;
+        }
+        li a.active{
+            background-color: rgb(95, 141, 141);
+            color: white;
+        }
+        li, a {
+            display: inline-block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active){
+            background-color: #00688B;
+            color: white;
+        }
+        li {
+            text-align:left;
+            border-bottom: 0px solid white;
+        }
+        li:last-child{
+            border-bottom:none;
+        }
+        body{
+            background-color: #00688B;
+            border: solid;
+            width: 1300;
+            height: 500px;
+            border-color: white;
+        }
+        h3{
+            text-align: center;
+            color: white;
+            font-family: cursive;
+            text-transform: uppercase;
+        }
+        p, img{
+            text-align: center;
+            color: white;
+            font-family: cursive;
+        }
+        img{
+            width: 80px;
+        }
+        .foto{
+            float: left;
+            margin: 10px;
+            font-family: cursive;
+            text-align: center;
+            margin-right: 100px;
+            margin-top: 50px;
+            position: center;
+        }
+        .centralizar{
+            margin-left: 430px;
+            font-family: cursive;
+            text-align: center;
+        }   
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="Página de Cinema.html">PÁGINA INICIAL</a></li>
+        <li><a href="Compra de Ingressos.html">COMPRA DE INGRESSOS</a></li>
+        <li><a href="Cadastramento.html">CADASTRO</a></li>
+        <li><a class="active" href="Contato[.html">FALE CONOSCO</a></li>
+        <li><a href="Local.html">LOCAL</a></li>
+    </ul>
+    <h3>Surgiu dúvidas? Ocorreu problemas na hora da compra? Aqui segue as formas de contato que você pode utilizar para entrar em contato conosco da Cinemaki :)🍿</h3>
+
+    <div class="centralizar">
+        <div class="foto">
+            <img src="atendente.png">
+            <p>0800 779 9876</p>
+        </div>
+        <div class="foto">
+            <img src="Email.png">
+            <p>cinemaki@gmail.com</p>
+        </div>
+        <div class="foto">
+            <img src="whats.png">
+            <p>(15) 98778-8653</p>
+        </div>
+</body>
+</html>

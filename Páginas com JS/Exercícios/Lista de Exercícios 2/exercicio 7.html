@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var peso=Number(prompt("Qual seu peso?"));
+        var altura=Number(prompt("Qual sua altura?"));
+        var IMC;
+        IMC=peso/(altura*altura);
+
+        if(IMC <= 18.5){
+            alert("Seu IMC é "+IMC+ " e você está abaixo do peso");
+        }
+        if(IMC > 18.5 && IMC <= 25){
+            alert("Seu IMC é "+IMC+ " e você está no peso normal");
+        }
+        if(IMC > 25 && IMC <= 30){
+            alert("Seu IMC é "+IMC+ " e você está acima do peso");
+        }
+        if(IMC > 30){
+            alert("Seu IMC é "+IMC+ " e você está obeso");
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

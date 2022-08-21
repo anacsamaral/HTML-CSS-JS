@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+body{
+font-size: 26px;
+font-family:verdana;
+}
+input {
+width: 360px;
+height: 50px;
+}
+</style>
+<script language=javascript type="text/javascript">
+<!--
+function verificarTexto(){
+var acertos = 0;
+if ((form.texto.value == "marcação")||(form.texto.value == "Marcação"))
+{
+acertos = acertos + 1; 
+}
+if ((form.css.value == "estilo") || (form.css.value == "Estilo"))
+{
+acertos = acertos + 1; 
+}
+
+alert ("Quantidade de acertos é: " + acertos);
+}
+-->
+</script>
+</head>
+<body>
+<center>
+<form name="form">
+<pre>
+HTML é uma linguagem de:
+<input type=text name="texto">
+
+CSS é o que na página:
+<input type=text name="css">
+
+<button onClick="verificarTexto()"> Enviar </button>
+</pre>
+</form>
+</center>
+</body>
+</html>
+
+</body>
+</html>
