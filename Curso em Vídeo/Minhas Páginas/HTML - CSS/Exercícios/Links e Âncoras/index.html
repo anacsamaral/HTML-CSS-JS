@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tabalhando com Links</title>
+</head>
+<body>
+   <h1>Usando links externos</h1>
+   <p>Você pode acessar o meu <a href="https://github.com/anacsousa5" target="_blank" rel="external"> Repositório Público No Github</a></p>
+   <!--
+      Para poder controlar onde o site de destino vai abrir, podemos usar o atributo target, que suporta os seguintes valores: 
+      ‣_blank vai abrir o link em uma nova janela em branco 
+      ‣_self vai abrir o link na janela ou frame atual (padrão) 
+      ‣_top vai desfazer todos os frames e abrir o destino no navegador completo 
+      ‣_parent similar ao uso do _top em uma referência à janela mãe
+   -->
+   <p>Você também pode acessar o meu <a href="http://instagram.com/ana_sdcw/" target="_blank" rel="external"> Instagram</a></p>
+   <h1>Usando links internos</h1>
+   <p>Esta é a primeira página do meu site. Se você quiser, pode acessar tambem a minha <a href="index2.html" rel="next" target="_self">Segunda Página</a></p><!--next é uma semântica que não da pra ser visto efeito visualmente-->
+   <p>Acesse também minha <a href="notícias/index3.html" rel="next" target="_self">Terceira Página</a></p>
+</body>
+</html>
