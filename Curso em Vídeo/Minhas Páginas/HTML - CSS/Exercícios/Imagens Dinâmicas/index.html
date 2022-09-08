@@ -11,14 +11,22 @@
    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
 
    <picture>
-      <source media="(max-width: 750px)" srcset="foto-p.png" type="image/png">
-      <source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png">
-      <img src="foto-g.png" alt="Imagem Flexível">
+      <source media="(max-width: 750px)" srcset="Imagens/foto-p.png" type="image/png">
+      <source media="(max-width: 1050px)" srcset="Imagens/foto-m.png" type="image/png">
+      <img src="Imagens/foto-g.png" alt="Imagem Flexível">
       <!--é necessário que a ordem dos códigos seja em ordem crescente, como acima que está da P até G-->
    </picture>
 
    <h1>Reproduzindo áudio</h1>
    <p>Vamos aprender a reproduzir áudio em HTML5</p>
-   <audio src=></audio>
+   <audio src="Mídia/read-all-over.mp3" controls autoplay></audio>
+   <!--compatível com os formatos MP3, WAV (muito pesados) e OGG-->
+   <p>ou</p>
+   <audio preload="auto" autoplay controls loop>
+      <source src="Mídia/read-all-over.mp3" type="audio/mpeg">
+      <source src="Mídia/read-all-over.ogg" type="audio/ogg
+      <source src="Mídia/read-all-over.wav" type="audio/wav">
+      <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="Mídia/read-all-over.mp3">Clique Aqui</a> para baixar o arquivo MP3</p>
+   </audio>
 </body>
 </html>
