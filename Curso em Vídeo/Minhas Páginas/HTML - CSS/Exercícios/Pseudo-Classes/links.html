@@ -5,13 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: rgb(206, 0, 206);
+        }
+        a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+        a:active{
+            color:red;
+        }
+
+        a::after{
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+    </style>
 </head>
 <body>
     <h1>Personalizando links</h1>
     <ul>
-        <li><a href=https://github.com/anacsousa5>Repositório do GitHub</a></li>
-        <li>Canal do Youtube</li>
-        <li>Site do Curso em Vídeo</li>
+        <li><a href="https://github.com/anacsousa5" target="_blank">Repositório do GitHub</a></li>
+        <li><a href="https://www.youtube.com/channel/UCqZVqZeFPvcKrgJGC-yk-3w">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/">Site do Curso em Vídeo</a></li>
     </ul>
 </body>
-</html> 
+</html>
