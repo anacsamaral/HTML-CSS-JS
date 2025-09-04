@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: elemento-com-brilho duration timing-function delay iteration-count direction fill-mode;
 }
 
 html {
@@ -96,6 +97,7 @@ h1 {
 
 .sobre {
     padding: 6rem 2 rem;
+    scroll-margin-top: 80px;
 }
 
 .sobre-titulo {
@@ -228,19 +230,6 @@ h1 {
 .botao-form:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(79,70,229,0.4);
-}
-
-.circulos {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background: 
-        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%)
-        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%);
 }
 
 @keyframes flutuar {
