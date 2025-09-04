@@ -35,9 +35,7 @@
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum nulla, repudiandae nihil nisi
-                a sit ratione quis ad distinctio natus quia corrupti accusamus voluptate minima labore sapiente odio
-                perspiciatis</p>
+            <p class="sobre-paragrafo">Sou graduanda em Sistemas de Informação com sólida experiência em diversas linguagens de programação, incluindo C, C++, Java, Swift, Python, HTML, CSS, JavaScript e R. Tenho também habilidades na construção e manipulação de dashboards utilizando DAX, com foco em análise e visualização de dados. Atualmente, estou aplicando meus conhecimentos no desenvolvimento de um software para uma organização não governamental, contribuindo para soluções práticas que impactam diretamente a gestão da instituição. Busco oportunidades na área de Back-end ou Dados, onde posso aplicar meu conhecimento técnico e minha capacidade analítica para criar sistemas eficientes e soluções orientadas por dados.</p>
         </div>
     </section>
 
@@ -45,37 +43,60 @@
         <h2 class="projetos-titulo">Meus Projetos</h2>
         <div class="projetos-descricao">
             <div class="projetos-card">
-                <img src="img/projeto1.png" alt="Projeto 1" class="projetos-img">
-                <h3 class="projetos-info">App AgroGestor</h3>
-                <p class="projetos-paragrafo">Aplicativo iOS para agricultura</p>
+                <img src="img/projeto-agrogestor.png" alt="Projeto 1" class="projetos-img">
+                <div class="caixa-textos-projeto">
+                    <h3 class="projetos-info">App AgroGestor</h3>
+                    <p class="projetos-paragrafo">Aplicativo iOS para agricultura</p>
+                </div>
             </div>
 
             <div class="projetos-card">
-                <img src="img/projeto1.png" alt="Projeto 1" class="projetos-img">
-                <h3 class="projetos-info">App AgroGestor</h3>
-                <p class="projetos-paragrafo">Aplicativo iOS para agricultura</p>
+                <img src="img/projeto-dashboard.png" alt="Projeto 1" class="projetos-img">
+                <div class="caixa-textos-projeto">
+                    <h3 class="projetos-info">Dashboards Power BI</h3>
+                    <p class="projetos-paragrafo">Criação de Dashboards para tomada de decisão</p>
+                </div>
             </div>
 
             <div class="projetos-card">
-                <img src="img/projeto1.png" alt="Projeto 1" class="projetos-img">
-                <h3 class="projetos-info">App AgroGestor</h3>
-                <p class="projetos-paragrafo">Aplicativo iOS para agricultura</p>
+                <img src="img/projeto-estatistica.png" alt="Projeto 1" class="projetos-img">
+                <div class="caixa-textos-projeto">
+                    <h3 class="projetos-info">Probabilidade e Estatística</h3>
+                    <p class="projetos-paragrafo">Fatores que influenciam a escolha profissional</p>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <section id="contato" class="contatos">
-        <h2 class="contato-titulo">Contato</h2>
-        <form class="formulario-contato" id="formulario">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form">
-            </div>
-            <div class="grupo-form">
-                <textarea class="text-form" placeholder="Digite sua Mensagem" id=""></textarea>
-            </div>
+        <h2 class="contato-titulo">Entre em Contato</h2>
+        <form class="contato-form" id="formulario" onsubmit="enviarEmail(event)">
+        <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome">
+        </div>
+        <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+        </div>
+    
+        <button type="submit" class="botao-form">Enviar Email</button>
+</form>
 
-        </form>
-    </section>
+    <script>
+        function enviarEmail(event) {
+            event.preventDefault();
+
+            var nome = document.getElementById('nome').value;
+            var mensagem = document.getElementById('mensagem').value;
+
+            var email = "anacsamaral@unoeste.edu.br";
+            var assunto = "Contato pelo site";
+            var corpo = `Olá, me chamo ${nome} e ${mensagem}`;
+
+            var url = `mailto:${email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+            window.location.href = url;
+        }
+    </script>
 </body>
 
 </html>
