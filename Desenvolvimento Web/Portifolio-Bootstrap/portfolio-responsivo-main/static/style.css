@@ -92,7 +92,7 @@ body {
 }
 
 section#inicio {
-  background-image: url("./img/bannerPortifolio.png");
+  background-image: url("./img/imagem-fundo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -281,17 +281,6 @@ i.menu-mobile {
   [data-anime="right"] {
     transform: translate3d(0, 100%, 0);
   }
-}
-
-#btn-enviar-loader{
-  display: none;
-}
-
-#alerta {
-  position: fixed;
-  z-index: 10;
-  top: 30px;
-  right: 30px;
 }
 
 #footer{
