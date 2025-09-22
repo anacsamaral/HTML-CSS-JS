@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios de JavaScript</title>
+</head>
+<body>
+  <script>
+    // 1. Inverter Palavra
+    function inverterPalavra() {
+      let palavra = prompt("Digite uma palavra:");
+      if (palavra) {
+        let invertida = palavra.split('').reverse().join('');
+        document.write("<h3>Palavra invertida: " + invertida + "</h3>");
+      }
+    }
+    //inverterPalavra();
+
+    // 2. Inverter Frase (ordem das palavras)
+    function inverterFrase() {
+      let frase = prompt("Digite uma frase:");
+      if (frase) {
+        let fraseInvertida = frase.split(' ').reverse().join(' ');
+        document.write("<h3>Frase invertida: " + fraseInvertida + "</h3>");
+      }
+    }
+    //inverterFrase();
+
+    // 3. Guardar Palavras em Vetor (até parar)
+    function adicionarPalavras() {
+      let palavras = [];
+      while (true) {
+        let nova = prompt("Digite uma palavra (ou 'sair' para terminar):");
+        if (!nova || nova.toLowerCase() === "sair") break;
+
+        if (!palavras.includes(nova)) {
+          palavras.push(nova);
+        } else {
+          alert("A palavra '" + nova + "' já existe!");
+        }
+      }
+      document.write("<h3>Vetor de palavras: " + palavras.join(", ") + "</h3>");
+    }
+    //adicionarPalavras();
+
+    // 4. Remover Vogais
+    function removerVogais() {
+      let texto = prompt("Digite um texto:");
+      if (texto) {
+        let semVogais = texto.replace(/[aeiouáàâãéèêíïóôõöúüñ]/gi, '');
+        document.write("<h3>Sem vogais: " + semVogais + "</h3>");
+      }
+    }
+    //removerVogais();
+
+    // 5. Cálculo de Salário Líquido
+    function calcularSalario() {
+      let salBruto = parseFloat(prompt("Digite o salário bruto:"));
+      if (isNaN(salBruto) || salBruto < 0) {
+        alert("Valor inválido!");
+        return;
+      }
+
+      let inss = 0;
+      if (salBruto <= 1412.00) {
+        inss = salBruto * 0.075;
+      } else if (salBruto <= 2666.68) {
+        inss = (1412.00 * 0.075) + ((salBruto - 1412.00) * 0.09);
+      } else if (salBruto <= 4000.03) {
+        inss = (1412.00 * 0.075) + ((2666.68 - 1412.00) * 0.09) + ((salBruto - 2666.68) * 0.12);
+      } else if (salBruto <= 7786.02) {
+        inss = (1412.00 * 0.075) + ((2666.68 - 1412.00) * 0.09) +
+               ((4000.03 - 2666.68) * 0.12) + ((salBruto - 4000.03) * 0.14);
+      } else {
+        inss = 908.85;
+      }
+
+      let baseIR = salBruto - inss;
+      let ir = 0;
+
+      if (baseIR <= 2259.20) {
+        ir = 0;
+      } else if (baseIR <= 2826.65) {
+        ir = baseIR * 0.075 - 169.44;
+      } else if (baseIR <= 3751.05) {
+        ir = baseIR * 0.15 - 381.44;
+      } else if (baseIR <= 4664.68) {
+        ir = baseIR * 0.225 - 662.77;
+      } else {
+        ir = baseIR * 0.275 - 896.00;
+      }
+
+      let salLiquido = salBruto - inss - ir;
+
+      document.write("<h3>Salário Bruto: R$ " + salBruto.toFixed(2) + "</h3>");
+      document.write("<h3>Desconto INSS: R$ " + inss.toFixed(2) + "</h3>");
+      document.write("<h3>Desconto IR: R$ " + ir.toFixed(2) + "</h3>");
+      document.write("<h3>Salário Líquido: R$ " + salLiquido.toFixed(2) + "</h3>");
+    }
+    //calcularSalario();
+  </script>
+</body>
+</html>
