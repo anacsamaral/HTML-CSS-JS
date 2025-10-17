@@ -274,6 +274,7 @@ Blog
 
 #blog {
     color: #333333;
+    display: none;
 }
 
 #blog h4 {
