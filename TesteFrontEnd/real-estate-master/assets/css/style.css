@@ -163,7 +163,7 @@ Hero
 .hero-details {
     position: absolute;
     top: 130px;
-    left: 50px;
+    right: 50px;
     max-width: 500px;
     z-index: 9000;
 }
