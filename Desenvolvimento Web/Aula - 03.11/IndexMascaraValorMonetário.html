@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="utf-8" />
+	<style type="text/css">
+          *{font: 25px calibri;}
+          h1{font: bold 40px calibri;}
+    </style>  
+</head>
+<body>
+   <h1>Testando formatação de valores monetários e máscaras em campos de formulários</h1>
+   <form id="formulario">
+        <label for="ivalor">Valor SEM formatação (enquanto digita):</label><br/>
+        <input id="ivalor" type="text" onkeypress="mMoeda(this)"
+		       />
+        <br/> <br/>
+        <label for="tNumero1">Valor SEM formatação (após a digitação):</label><br/>
+        <input type="text" id="tNumero1" onblur="formatReal(this)" 
+		       />       
+        <br/> <br/>
+        <label for="tNumero2">Valor COM formatação e converte SEM a formatação:</label><br/>
+        <input type="text" id="tNumero2" onblur="getMoney()"  
+		       />
+        <br/> <br/>
+        <label for="iCPF">CPF:</label><br/>
+        <input id="iCPF" type="text" placeholder="999.999.999-99" onkeypress="mCpf()" maxlength="14" onblur="validarCPF(this)"
+		      />
+        <br/> <br/>
+        <label for="iCEP">CEP:</label><br/>
+        <input id="iCEP" type="text" placeholder="99.999-999" onkeypress="mCEP(this)"
+		      />
+        <br/> <br/>
+        <label for="iCelular">Celular:</label><br/>
+        <input id="iCelular" type="text" placeholder="(99)99999-9999" onkeydown="mascara('(##)#####-####',this,event)"
+		      />
+        <br/> <br/>
+        <label for="tNumero3">Telefone:</label><br/>
+        <input type="text" id="tNumero3" placeholder="(99)9999-9999" onkeypress="mascara('(##)####-####',this,event)"
+		       />
+        <br/><br/>
+        <label for="tNumero4">CEP:</label><br/>
+        <input type="text" id="tNumero4" placeholder="99999-999" onkeyup="mascara('#####-###',this,event)"
+		       />
+        <br/><br/>
+        <label for="tNumero5">CPF:</label><br/>
+        <input type="text" id="tNumero5" placeholder="999.999.999-99" onkeydown="mascara('###.###.###-##',this,event)" 
+		       />
+
+        <br/><br/>
+        <label for="tNumero5">CNPJ:</label><br/>
+        <input type="text" id="tNumero5" placeholder="99.999.999/9999-99" onkeydown="mascara('##.###.###/####-##',this,event)" 
+		       />
+        <br/><br/>
+        
+   </form>
+   <script src="MascarasValidaCPF.js"></script>
+
+  </body>
+</html>
+
+
