@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Login / Cadastro</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .form-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      padding: 40px 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-login {
+      background-color: #00A8B5;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="login-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          <path
+            d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22"
+            stroke="currentColor" stroke-width="1.5"></path>
+          <path opacity="0.5"
+            d="M21 22V8.5C21 7.09554 21 6.39331 20.6629 5.88886C20.517 5.67048 20.3295 5.48298 20.1111 5.33706C19.6067 5 18.9045 5 17.5 5"
+            stroke="currentColor" stroke-width="1.5"></path>
+          <path opacity="0.5"
+            d="M3 22V8.5C3 7.09554 3 6.39331 3.33706 5.88886C3.48298 5.67048 3.67048 5.48298 3.88886 5.33706C4.39331 5 5.09554 5 6.5 5"
+            stroke="currentColor" stroke-width="1.5"></path>
+          <path d="M12 22V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <h1 class="sitename">Alimentos</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Inicial</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="page-doacoes.html">Doações</a></li>
+          <li><a href="department-details.html"><span>Dashboards</span></a>
+
+          <li class="dropdown">
+            <a href="#"><span>Mais Páginas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="service-details.html">Transparência</a></li>
+              <li><a href="services.html">Artigos</a></li>
+              <li><a href="contact.html">Contato/Suporte</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login.html">Login</a>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main" role="main">
+
+  <!-- Page Title -->
+  <div class="page-title" aria-labelledby="page-title-heading">
+    <div class="breadcrumbs">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/index.html" aria-label="Página inicial">
+              <i class="bi bi-house" aria-hidden="true"></i> Home
+            </a>
+          </li>
+          <li class="breadcrumb-item active current" aria-current="page">Login / Cadastro</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="title-wrapper text-center">
+      <h1 id="page-title-heading">Bem-vindo!</h1>
+      <p>Acesse a sua conta ou realize o cadastro e faça parte da nossa comunidade!</p>
+    </div>
+  </div>
+
+  <!-- Login / Cadastro Section -->
+  <section id="login" class="login section" aria-labelledby="login-heading">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-6 col-md-8">
+
+          <!-- Tabs -->
+          <ul class="nav nav-tabs mb-4 justify-content-center" id="loginCadastroTabs" role="tablist" aria-label="Escolha entre login e cadastro">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active"
+                      id="login-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#login-tab-content"
+                      type="button"
+                      role="tab"
+                      aria-controls="login-tab-content"
+                      aria-selected="true">
+                Já sou cadastrado
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link"
+                      id="cadastro-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#cadastro-tab-content"
+                      type="button"
+                      role="tab"
+                      aria-controls="cadastro-tab-content"
+                      aria-selected="false">
+                Não possuo login
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+
+            <!-- Aba Login -->
+            <div class="tab-pane fade show active form-card"
+                 id="login-tab-content"
+                 role="tabpanel"
+                 aria-labelledby="login-tab">
+              <h2 id="login-heading">Login</h2>
+              <form action="#" method="post" class="appointment-form php-email-form" aria-label="Formulário de login">
+                <div class="row gy-3">
+                  <div class="col-12">
+                    <label for="email-login" class="visually-hidden">Email</label>
+                    <input type="email" id="email-login" name="email" class="form-control" placeholder="Email" required aria-required="true">
+                  </div>
+                  <div class="col-12">
+                    <label for="senha-login" class="visually-hidden">Senha</label>
+                    <input type="password" id="senha-login" name="senha" class="form-control" placeholder="Senha" required aria-required="true">
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-login w-100" aria-label="Entrar na conta">
+                      <i class="bi bi-box-arrow-in-right me-2" aria-hidden="true"></i>Entrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Aba Cadastro -->
+            <div class="tab-pane fade form-card"
+                 id="cadastro-tab-content"
+                 role="tabpanel"
+                 aria-labelledby="cadastro-tab">
+              <h2>Cadastro</h2>
+              <form action="#" method="post" class="appointment-form php-email-form" aria-label="Formulário de cadastro">
+                <div class="row gy-3">
+
+                  <div class="col-md-6">
+                    <label for="categoria" class="visually-hidden">Categoria</label>
+                    <select id="categoria" name="categoria" class="form-control" required aria-required="true">
+                      <option value="" disabled selected>Escolha uma opção</option>
+                      <option value="doador">Quero ser um doador</option>
+                      <option value="donatario">Quero receber uma doação</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="nome" class="visually-hidden">Nome completo</label>
+                    <input type="text" id="nome" name="name" class="form-control" placeholder="Nome completo" required aria-required="true">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email-cadastro" class="visually-hidden">Email</label>
+                    <input type="email" id="email-cadastro" name="email" class="form-control" placeholder="Email" required aria-required="true">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="telefone" class="visually-hidden">Telefone</label>
+                    <input type="tel" id="telefone" name="phone" class="form-control" placeholder="Telefone" required aria-required="true">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="senha-cadastro" class="visually-hidden">Senha</label>
+                    <input type="password" id="senha-cadastro" name="senha" class="form-control" placeholder="Senha" required aria-required="true">
+                  </div>
+
+                  <div class="col-12">
+                    <label for="mensagem" class="visually-hidden">Mensagem opcional</label>
+                    <textarea id="mensagem" class="form-control" name="message" rows="4"
+                              placeholder="Como conheceu nossa organização? (opcional)"></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-login w-100" aria-label="Realizar cadastro">
+                      <i class="bi bi-calendar-plus me-2" aria-hidden="true"></i>Fazer cadastro
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+          </div><!-- /tab-content -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Nutribem</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p class="mt-3"><strong>Telefone:</strong> <span>+55 18 98852-9095</span></p>
+            <p><strong>Email:</strong> <span>nutribem@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">Sobre nós</a></li>
+            <li><a href="/page-doacoes.html">Serviços</a></li>
+            <li><a href="#">Termos de serviço</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nossos serviços</h4>
+          <ul>
+            <li><a href="/page-doacoes.html">Doações</a></li>
+            <li><a href="/login.html">Cadastro de Instituições</a></li>
+            <li><a href="/services.html">Projetos Sociais</a></li>
+            <li><a href="/services.html">Blog</a></li>
+            <li><a href="service-details.html">Nosso Trabalho</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Nutribem</strong> <span>Todos os direitos
+          reservados</span></p>
+      <div class="credits">Design baseado em <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
